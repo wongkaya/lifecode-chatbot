@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peta Hati — Refleksi Rohani 10 Menit | LifeCode</title>
+<meta name="description" content="Refleksi hati 10 menit, gratis. Dapatkan Peta Hati pribadi dan lanjutkan dengan sesi pendampingan 1-on-1.">
+<meta name="theme-color" content="#4A6670">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ketika Doa Terasa Sunyi, Anda Tidak Harus Melaluinya Sendirian">
+<meta property="og:description" content="Refleksi hati 10 menit, gratis. Dapatkan Peta Hati pribadi Anda.">
+<!-- GANTI dengan gambar 1200x630 milik Anda -->
+<meta property="og:image" content="https://lifecode.my.id/og-peta-hati.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%95%8A%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:#F5F1E8;color:#3A3A3A;line-height:1.7}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 24px;background:linear-gradient(135deg,#F5F1E8,#EDE5D3)}
+.hero-content{max-width:800px;text-align:center}
+.tagline{display:inline-block;color:#7A6230;letter-spacing:4px;font-size:.8rem;font-weight:500;margin-bottom:24px;text-transform:uppercase}
+.hero h1{font-family:Georgia,serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:500;line-height:1.2;margin-bottom:24px}
+.hero h1 em{font-style:italic;color:#4A6670}
+.hero-subtitle{font-size:1.1rem;color:#6B6B6B;max-width:600px;margin:0 auto 32px}
+.hero-verse{font-family:Georgia,serif;font-style:italic;color:#6E5A3C;font-size:1.05rem;margin-bottom:36px;padding:0 20px}
+.cta-btn{background:#4A6670;color:#fff;padding:18px 48px;border-radius:50px;font-weight:500;font-size:.95rem;border:none;cursor:pointer;font-family:inherit}
+.cta-btn:disabled{opacity:.6;cursor:default}
+.section{padding:80px 24px;max-width:900px;margin:0 auto}
+.section-label{display:block;color:#7A6230;letter-spacing:3px;font-size:.75rem;font-weight:500;text-transform:uppercase;margin-bottom:16px;text-align:center}
+.section h2{font-family:Georgia,serif;font-size:clamp(1.8rem,4vw,2.6rem);text-align:center;margin-bottom:40px;font-weight:500}
+.pain-points{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.pain-card{background:#fff;padding:28px 24px;border-radius:16px;border-left:3px solid #C9A961}
+.pain-card h3{font-family:Georgia,serif;font-size:1.2rem;color:#4A6670;margin:12px 0 8px}
+.pain-num{font-family:Georgia,serif;color:#7A6230;font-size:1.4rem;letter-spacing:2px}
+.pain-card p{font-size:.9rem;color:#6B6B6B}
+.chatbot-section{background:linear-gradient(180deg,#EDE5D3,#F5F1E8);padding:60px 24px}
+.chatbot-container{max-width:680px;margin:0 auto;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.08);overflow:hidden;display:flex;flex-direction:column;height:800px;height:min(800px,88vh);height:min(800px,88dvh)}
+.chatbot-header{background:linear-gradient(135deg,#4A6670,#6B8E9B);color:#fff;padding:18px 24px;display:flex;align-items:center;gap:14px;flex-shrink:0}
+.chatbot-avatar{width:42px;height:42px;border-radius:50%;background:#C9A961;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.chatbot-header-text h3{font-family:Georgia,serif;font-size:1.2rem;margin-bottom:2px}
+.chatbot-header-text p{font-size:.78rem;opacity:.85}
+.progress-bar{height:3px;background:rgba(255,255,255,.2);flex-shrink:0}
+.progress-fill{height:100%;background:#C9A961;width:0%;transition:width .5s ease}
+.chatbot-messages{flex:1;min-height:0;overflow-y:auto;padding:24px;background:#F5F1E8}
+.message{margin-bottom:16px;display:flex;gap:10px}
+.message.user{flex-direction:row-reverse}
+.message-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.message.bot .message-avatar{background:#C9A961}
+.message.user .message-avatar{background:#4A6670;color:#fff}
+.message-bubble{max-width:78%;padding:13px 17px;border-radius:14px;font-size:.93rem;line-height:1.6}
+.message.bot .message-bubble{background:#fff;border-bottom-left-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.message.user .message-bubble{background:#4A6670;color:#fff;border-bottom-right-radius:4px}
+.greeting-bubble{background:linear-gradient(135deg,#FFF9EC,#fff)!important;border:1px solid #C9A961!important;border-left:4px solid #C9A961!important}
+.validation-bubble{background:#F5F1E8!important;border-left:3px solid #6B8E9B!important;font-style:italic;color:#4A6670!important}
+.crisis-bubble{background:#FFF4E5!important;border-left:4px solid #D9822B!important}
+.message-bubble .verse{display:block;font-family:Georgia,serif;font-style:italic;color:#6E5A3C;margin-top:10px;padding-top:10px;border-top:1px dashed rgba(139,115,85,.3);font-size:.88rem}
+.message-bubble .note{display:block;color:#6B6B6B;margin-top:10px;padding-top:10px;border-top:1px dashed rgba(139,115,85,.3);font-size:.88rem}
+.typing-indicator{display:flex;gap:4px;padding:4px 2px}
+.typing-indicator span{width:7px;height:7px;background:#6B8E9B;border-radius:50%;animation:typing 1.2s infinite}
+.typing-indicator span:nth-child(2){animation-delay:.2s}
+.typing-indicator span:nth-child(3){animation-delay:.4s}
+@keyframes typing{0%,60%,100%{opacity:.3}30%{opacity:1}}
+.chatbot-input{padding:16px 20px;background:#fff;border-top:1px solid #EDE5D3;min-height:60px;flex-shrink:0;max-height:60%;overflow-y:auto}
+.input-options{display:flex;flex-direction:column;gap:8px}
+.option-btn{background:#F5F1E8;border:none;padding:12px 16px;border-radius:10px;text-align:left;cursor:pointer;font-size:.9rem;font-family:inherit;color:#3A3A3A}
+.option-btn:hover{background:#C9A961;color:#fff}
+.slider-container{padding:8px 0}
+.slider-container label{display:block;margin-bottom:10px;font-size:.88rem;color:#6B6B6B}
+.slider-value{font-weight:600;color:#4A6670;font-size:1.3rem;margin-left:6px}
+.slider-input{width:100%;margin:10px 0}
+.text-input,.date-input{width:100%;padding:12px 14px;border:1px solid #EDE5D3;border-radius:10px;font-family:inherit;font-size:.93rem;background:#F5F1E8;color:#3A3A3A;display:block}
+.text-input{resize:vertical;min-height:64px}
+.text-input:focus,.date-input:focus{outline:2px solid #6B8E9B}
+.submit-btn{margin-top:10px;background:#4A6670;color:#fff;border:none;padding:12px 20px;border-radius:50px;cursor:pointer;font-weight:500;font-size:.88rem;width:100%;font-family:inherit}
+.submit-btn:hover{background:#3A3A3A}
+.submit-btn:disabled{background:#ccc;cursor:default}
+.summary-card{background:#F5F1E8;border:1px solid #C9A961;border-radius:12px;padding:18px;margin-top:8px}
+.summary-card h4{font-family:Georgia,serif;color:#4A6670;margin-bottom:12px;font-size:1.15rem}
+.summary-item{padding:8px 0;border-bottom:1px dashed rgba(139,115,85,.2);font-size:.88rem}
+.summary-item:last-child{border-bottom:none}
+.summary-item strong{color:#6E5A3C;display:block;font-size:.72rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+.final-cta{margin-top:16px;padding:20px;background:#4A6670;color:#fff;border-radius:12px;text-align:center}
+.final-cta h4{font-family:Georgia,serif;font-size:1.15rem;margin-bottom:8px}
+.final-cta p{font-size:.88rem;opacity:.9;margin-bottom:14px}
+.final-cta a{display:inline-block;background:#C9A961;color:#fff;padding:11px 26px;border-radius:50px;text-decoration:none;font-weight:500;font-size:.88rem}
+footer{background:#3A3A3A;color:#F5F1E8;padding:40px 24px;text-align:center}
+footer .logo-text{font-family:Georgia,serif;font-size:1.3rem;color:#C9A961;margin-bottom:8px}
+footer p{font-size:.82rem;opacity:.7;margin-bottom:4px}
+@media(max-width:640px){
+.chatbot-section{padding:40px 12px}
+.chatbot-container{max-width:100%;border-radius:16px}
+.chatbot-messages{padding:16px}
+.message-bubble{max-width:85%;font-size:.9rem}
+.section{padding:60px 16px}
+.hero{padding:40px 16px}
+}
+.about{display:flex;gap:24px;align-items:center;background:#fff;border-radius:16px;padding:28px;border-left:3px solid #C9A961}
+.about-photo{width:88px;height:88px;border-radius:50%;background:#4A6670;color:#fff;font:2rem Georgia,serif;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+.about h3{font-family:Georgia,serif;color:#4A6670;margin-bottom:6px}
+.about p{font-size:.92rem;color:#5A5A5A;margin-bottom:8px}
+.about .limits{background:#F5F1E8;padding:10px 14px;border-radius:10px;font-size:.85rem}
+.skip-btn{background:none;border:none;color:#6B6B6B;font-size:.82rem;text-decoration:underline;cursor:pointer;margin-top:8px;display:block;width:100%;padding:8px;font-family:inherit}
+@media(max-width:640px){.about{flex-direction:column;text-align:center}}
+@media(prefers-reduced-motion:reduce){.typing-indicator span{animation:none;opacity:.6}.progress-fill{transition:none}}
+.js-warn{display:block;background:#FFF4E5;border:1px solid #D9822B;border-radius:10px;padding:10px 14px;margin:14px auto 0;max-width:520px;font-size:.85rem;color:#7A4A10}
+.js-ok .js-warn{display:none}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-content">
+    <span class="tagline">LifeCode · Refleksi Hati</span>
+    <h1>Ketika Doa Terasa <em>Sunyi</em>,<br>Anda Tidak Harus Melaluinya Sendirian.</h1>
+    <p class="hero-subtitle">Ruang aman untuk melihat kembali hati Anda — tanpa penghakiman, tanpa kepura-puraan.</p>
+    <p class="hero-verse">"Carilah terlebih dahulu Kerajaan Allah dan kebenarannya, maka semuanya itu akan ditambahkan kepadamu." — Matius 6:33</p>
+    <button class="cta-btn" id="startBtn" type="button">Mulai Refleksi 10 Menit — Gratis →</button>
+    <p style="margin-top:14px;font-size:.85rem;color:#6B6B6B">Tanpa daftar · Anda mendapat Peta Hati pribadi di akhir</p>
+    <p class="js-warn">⚠ Skrip halaman belum berjalan di tempat Anda membuka file ini, sehingga chat tidak bisa aktif. Buka lewat browser (Chrome/Safari) atau upload ke hosting.</p>
+  </div>
+</section>
+
+<section class="section">
+  <span class="section-label">Apakah Anda Mengalami Ini?</span>
+  <h2>Banyak orang berdoa, namun merasa langit tetap sunyi.</h2>
+  <div class="pain-points">
+    <div class="pain-card"><div class="pain-num">01</div><h3>Kecemasan yang Tak Reda</h3><p>Pikiran berputar tanpa henti meski sudah berdoa berkali-kali.</p></div>
+    <div class="pain-card"><div class="pain-num">02</div><h3>Topeng "Baik-Baik Saja"</h3><p>Tersenyum di luar, tapi di dalam sedang hancur.</p></div>
+    <div class="pain-card"><div class="pain-num">03</div><h3>Dendam yang Menggerogoti</h3><p>Sulit melepaskan seseorang yang melukai Anda.</p></div>
+    <div class="pain-card"><div class="pain-num">04</div><h3>Pintu yang Terus Tertutup</h3><p>Sudah berusaha, namun hasil tetap kosong.</p></div>
+  </div>
+</section>
+
+<section class="section" id="tentang" style="padding-bottom:40px">
+  <span class="section-label">Siapa di Balik Ini</span>
+  <div class="about">
+    <!-- GANTI huruf V dengan <img src="foto-anda.jpg" alt="Vell" width="88" height="88"> -->
+    <div class="about-photo" aria-hidden="true">V</div>
+    <div>
+      <h3>Halo, saya Vell.</h3>
+      <p>Saya pendiri LifeCode. Saya mendampingi orang melihat pola emosi dan imannya sendiri, dengan dasar pelatihan NLP dan hipnoterapi. <!-- EDIT: sesuaikan bio dan pengalaman Anda --></p>
+      <p class="limits"><strong>Batasan layanan:</strong> ini pendampingan refleksi rohani, bukan terapi, konseling klinis, atau layanan darurat. Untuk kondisi berat (depresi, kecemasan berat, pikiran menyakiti diri) saya akan merujuk Anda ke psikolog atau psikiater.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chatbot-section" id="journey">
+  <div style="max-width:680px;margin:0 auto 32px;text-align:center">
+    <span class="section-label">Pendamping Refleksi</span>
+    <h2 style="font-family:Georgia,serif;margin-bottom:12px">Mari kita lihat hati Anda bersama-sama.</h2>
+    <p style="color:#6B6B6B;font-size:.92rem">Jawablah sejujur mungkin. Pertanyaan yang sulit boleh dilewati. Jawaban Anda hanya ada di layar ini dan tidak disimpan di server.</p>
+  </div>
+  <div class="chatbot-container">
+    <div class="chatbot-header">
+      <div class="chatbot-avatar">🕊️</div>
+      <div class="chatbot-header-text"><h3>Natanael</h3><p>Pendamping Refleksi LifeCode</p></div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="chatbot-messages" id="chatMessages" role="log" aria-live="polite"></div>
+    <div class="chatbot-input" id="chatInput"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo-text">LifeCode · Clear Heart</div>
+  <p>Konsultasi Privat: @lifecode.app</p>
+  <p>© 2026 LifeCode. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.documentElement.className += " js-ok";
+var DEBUG = true; // set false sebelum rilis
+window.addEventListener("error", function(e){ if (!DEBUG) return; var b = document.createElement("div"); b.style.cssText = "position:fixed;bottom:0;left:0;right:0;background:#7A1F1F;color:#fff;padding:10px 14px;font-size:.8rem;z-index:9999"; b.textContent = "Error skrip: " + e.message; document.body.appendChild(b); });
+var BOOKING_URL = 'https://wa.me/628595006988'; // ganti dengan link booking/pembayaran jika sudah ada
+var FB_PIXEL_ID = '';                            // isi ID Pixel Anda untuk melacak funnel
+var CRISIS_HOTLINE = '119 ext. 8 (layanan kesehatan jiwa Kemenkes)'; // VERIFIKASI sebelum rilis
+var CRISIS_WORDS = ['bunuh diri','mengakhiri hidup','ingin mati','tidak ingin hidup','tak ingin hidup','menyakiti diri','melukai diri','akhiri hidup','lebih baik mati','capek hidup'];
+
+if (FB_PIXEL_ID) {!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',FB_PIXEL_ID);fbq('track','PageView');}
+// Hanya nama event yang dikirim, TIDAK ada jawaban pengguna
+function track(name){ try { if (window.fbq) fbq('trackCustom', name); (window.dataLayer = window.dataLayer || []).push({event: name}); } catch(e){} }
+
+var currentStep = 0, userAnswers = {}, started = false, isProcessing = false, step5Sent = false;
+var monthNames = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+
+var journey = [
+  {id:'nama', message:'Sebelum kita melangkah lebih dalam, izinkan saya mengenal Anda. Siapakah nama panggilan Anda?', inputType:'text', placeholder:'Tulis nama panggilan Anda...'},
+  {id:'welcome', message:'Baiklah, {name}. Sebelum kita mulai:', note:'Tuhan tidak terkejut dengan isi hatimu. Dia sudah tahu, dan Dia tetap menunggumu datang.', inputType:'options', options:['Saya siap untuk jujur','Saya masih ragu, tapi ingin mencoba']},
+  {id:'cond1', message:'{name}, kondisi kehidupan Anda saat ini di fase mana?', inputType:'options', options:['🌊 Masa tenang & stabil','⏳ Masa penantian — doa belum terjawab','🔥 Masa krisis berat']},
+  {id:'worry', message:'Dari skala 1-10, seberapa besar kecemasan yang Anda tanggung saat ini?', inputType:'slider', min:1, max:10, defaultValue:5, label:'Tingkat kecemasan'},
+  {id:'usia', message:'Terima kasih, {name}. Boleh tahu usia Anda? Saya akan menghitung "umur berkat" Anda. (wajib diisi)', inputType:'number'},
+  {id:'berkatUsia', isBlessingStep:true},
+  {id:'topeng', message:'Apakah Anda sering berpura-pura baik-baik saja di depan orang lain, padahal batin sedang tidak baik?', verse:'"Lihat, seorang Israel sejati, yang tidak ada kepalsuan di dalamnya!" — Yohanes 1:47', inputType:'options', options:['Ya — saya takut terlihat lemah','Kadang-kadang','Tidak — saya berusaha otentik']},
+  {id:'kegagalan', message:'Ceritakan satu situasi di mana Anda sudah bekerja keras dan berdoa, tapi tidak sesuai harapan?', inputType:'text', placeholder:'Tuliskan dengan jujur di sini...', needsValidation:true, validationType:'kegagalan', skip:true},
+  {id:'dendam', message:'{name}, adakah seseorang yang sulit Anda ampuni saat ini?', inputType:'options', options:['Ya, ada.','Tidak, saya sudah melepaskan.']},
+  {id:'motivasi', message:'Bagaimana pola Anda mencari Tuhan dalam keseharian?', inputType:'options', options:['Lebih intens saat sedang krisis','Cukup stabil di masa tenang maupun sulit']},
+  {id:'bisikan', message:'{name}, tuliskan satu bisikan negatif yang paling sering muncul di pikiran Anda.', inputType:'text', placeholder:'Tuliskan bisikan negatif itu...', needsValidation:true, validationType:'bisikan', skip:true},
+  {id:'kebenaran', message:'Sekarang, izinkan Firman-Nya berbicara kepada Anda, {name}:', verse:'"Pandanglah burung-burung di langit... Bukankah kamu jauh lebih berharga daripadanya?" — Matius 6:26', inputType:'options', options:['Saya menerima kebenaran ini','Saya masih berjuang mempercayainya']},
+  {id:'penyerahan', message:'Satu langkah nyata minggu ini yang ingin Anda ambil sebagai bentuk langkah iman yang baru?', inputType:'text', placeholder:'Tuliskan komitmen Anda...', needsValidation:true, validationType:'penyerahan', skip:true}
+];
+
+var validations = {
+  kegagalan:['Terima kasih. Kami bisa memahami perasaan Anda saat ini.','Rasanya melelahkan ketika sudah berusaha maksimal namun hasilnya tidak sesuai harapan. Terima kasih sudah berani bercerita.','Saya mendengar Anda. Apa yang Anda alami itu nyata, dan Anda tidak perlu menyimpannya sendirian.'],
+  bisikan:['Terima kasih sudah menuliskannya. Pikiran seperti itu sering terasa sangat nyata, tapi tidak mendefinisikan siapa Anda.','Menuliskan pikiran yang menyakitkan itu tidak mudah. Mengenalinya adalah langkah awal untuk tidak dikuasainya.','Bisikan seperti itu bisa sudah lama tinggal di kepala. Melihatnya dengan jujur, seperti sekarang, sudah langkah yang berarti.'],
+  penyerahan:['Langkah kecil yang konkret sering kali paling bertahan. Semoga minggu ini terasa lebih ringan.','Ini komitmen yang jelas dan bisa dijalani. Satu langkah cukup untuk memulai.','Terima kasih sudah memilih langkah nyata. Lakukan pelan-pelan, tidak perlu sempurna.']
+};
+
+function escapeHtml(t){ if (t === null || t === undefined) return ''; return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function formatNumber(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.'); }
+function personalize(t){
+  var n = '<strong>' + escapeHtml(userAnswers.nama || 'Sahabat') + '</strong>';
+  return String(t).replace(/\{name\}/g, function(){ return n; });
+}
+function parseDateInput(v){
+  if (!v) return null;
+  var p = String(v).split('-'); if (p.length !== 3) return null;
+  var d = new Date(parseInt(p[0],10), parseInt(p[1],10)-1, parseInt(p[2],10));
+  return isNaN(d.getTime()) ? null : d;
+}
+function formatDateDisplay(v){ var d = parseDateInput(v); return d ? d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear() : v; }
+function calculateAgeBlessing(age, name){
+  var sn = escapeHtml(name || 'Sahabat'), years = parseInt(age, 10);
+  if (!years || years < 1) return {totalDays:'0', years:0, blessingMessage: sn + ', mari kita lanjutkan.'};
+  var df = formatNumber(Math.round(years * 365.25));
+  return {totalDays:df, years:years, blessingMessage:
+    sn + ', tahukah Anda? Hari ini Anda telah menjalani sekitar <strong>' + df + ' hari</strong> di bumi ini.<br><br>' +
+    'Itu bukan sekadar angka — itu <strong>' + df + ' pagi</strong> di mana matahari terbit karena Dia setia, dan <strong>' + df + ' malam</strong> di mana Dia menjaga tidur Anda.<br><br>' +
+    'Sudah <strong>' + years + ' tahun</strong> Anda ditopang. <em>Anda adalah penerima kasih karunia yang luar biasa.</em> 🌿'};
+}
+function getValidation(t){ var a = validations[t]; return a ? a[Math.floor(Math.random()*a.length)] : 'Apa yang Anda rasakan itu valid. ❤'; }
+function hasCrisisSignal(t){ t = String(t || '').toLowerCase(); return CRISIS_WORDS.some(function(w){ return t.indexOf(w) !== -1; }); }
+
+function buildMessage(cls, av, html, bc){
+  var box = document.getElementById('chatMessages'); if (!box) return;
+  var m = document.createElement('div'); m.className = 'message ' + cls;
+  var a = document.createElement('div'); a.className = 'message-avatar'; a.innerHTML = av;
+  var b = document.createElement('div'); b.className = 'message-bubble' + (bc ? ' ' + bc : ''); b.innerHTML = html;
+  m.appendChild(a); m.appendChild(b); box.appendChild(m); box.scrollTop = box.scrollHeight;
+}
+function addBotMessage(text, verse, cls, note){
+  var x = verse ? '<span class="verse">' + personalize(verse) + '</span>' : '';
+  if (note) x += '<span class="note">' + personalize(note) + '</span>';
+  buildMessage('bot', '🕊️', personalize(text) + x, cls);
+}
+function addRawBotMessage(html){ buildMessage('bot', '🕊️', html, ''); }
+function addUserMessage(text){
+  var box = document.getElementById('chatMessages'); if (!box) return;
+  var m = document.createElement('div'); m.className = 'message user';
+  m.innerHTML = '<div class="message-avatar">❤</div><div class="message-bubble"></div>';
+  m.lastChild.textContent = text; box.appendChild(m); box.scrollTop = box.scrollHeight;
+}
+function showTyping(){
+  hideTyping();
+  var box = document.getElementById('chatMessages'); if (!box) return;
+  var m = document.createElement('div'); m.className = 'message bot'; m.id = 'typingMsg';
+  m.innerHTML = '<div class="message-avatar">🕊️</div><div class="message-bubble"><div class="typing-indicator"><span></span><span></span><span></span></div></div>';
+  box.appendChild(m); box.scrollTop = box.scrollHeight;
+}
+function hideTyping(){ var t = document.getElementById('typingMsg'); if (t && t.parentNode) t.parentNode.removeChild(t); }
+function updateProgress(){ var f = document.getElementById('progressFill'); if (f) f.style.width = Math.min(currentStep / journey.length * 100, 100) + '%'; }
+
+function startJourney(){
+  if (started) return; started = true; track('LC_Start');
+  var btn = document.getElementById('startBtn');
+  if (btn) { btn.disabled = true; btn.textContent = 'Menuju Ruang Refleksi...'; }
+  var j = document.getElementById('journey'); if (j && j.scrollIntoView) j.scrollIntoView();
+  setTimeout(showGreeting, 500);
+}
+function showGreeting(){
+  var g = ['Salam damai, sahabat. 🕊️ Saya Natanael, pendamping refleksi Anda.',
+           'Anda tidak perlu berpura-pura kuat di sini. Saya program refleksi, bukan konselor atau layanan darurat.',
+           'Mari kita mulai pelan-pelan...'];
+  (function next(i){
+    if (i >= g.length) { setTimeout(function(){ askQuestion(0); }, 300); return; }
+    showTyping();
+    setTimeout(function(){ hideTyping(); addBotMessage(g[i], null, i === 0 ? 'greeting-bubble' : ''); setTimeout(function(){ next(i + 1); }, 450); }, 700);
+  })(0);
+}
+
+function askQuestion(index){
+  if (index >= journey.length) { showSummary(); return; }
+  currentStep = index; updateProgress();
+  if (index === 5 && !step5Sent) { step5Sent = true; track('LC_Step5'); }
+  var step = journey[index];
+  if (step.isBlessingStep) { handleBlessing(); return; }
+  showTyping();
+  setTimeout(function(){
+    hideTyping(); addBotMessage(step.message, step.verse || null, '', step.note || null);
+    setTimeout(function(){ renderInput(step); }, 300);
+  }, 800);
+}
+function handleBlessing(){
+  if (!userAnswers.usia) { askQuestion(currentStep + 1); return; }
+  showTyping();
+  setTimeout(function(){
+    hideTyping();
+    var d = calculateAgeBlessing(userAnswers.usia, userAnswers.nama);
+    addRawBotMessage(d.blessingMessage);
+    setTimeout(function(){
+      showTyping();
+      setTimeout(function(){
+        hideTyping();
+        addBotMessage('Ingat kembali selama <strong>' + d.totalDays + '</strong> hari, berkat-berkat apa saja yang sudah Anda terima &amp; rasakan? Sekarang, izinkan saya bertanya lebih dalam...');
+        setTimeout(function(){ askQuestion(currentStep + 1); }, 800);
+      }, 1000);
+    }, 1800);
+  }, 1000);
+}
+
+function addSkip(ci, step){
+  if (!step.skip) return;
+  var s = document.createElement('button'); s.type = 'button'; s.className = 'skip-btn'; s.textContent = 'Lewati pertanyaan ini';
+  s.onclick = function(){ handleAnswer('', step, true); };
+  ci.appendChild(s);
+}
+function renderInput(step){
+  var ci = document.getElementById('chatInput'); if (!ci) return; ci.innerHTML = '';
+  if (step.inputType === 'options') {
+    var w = document.createElement('div'); w.className = 'input-options';
+    step.options.forEach(function(o){
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'option-btn'; b.textContent = o;
+      b.onclick = function(){ handleAnswer(o, step); }; w.appendChild(b);
+    });
+    ci.appendChild(w);
+  } else if (step.inputType === 'slider') {
+    var sw = document.createElement('div'); sw.className = 'slider-container';
+    var l = document.createElement('label'); l.innerHTML = step.label + ': <span class="slider-value" id="sliderVal">' + step.defaultValue + '</span> / ' + step.max;
+    var sl = document.createElement('input'); sl.type = 'range'; sl.className = 'slider-input'; sl.min = step.min; sl.max = step.max; sl.value = step.defaultValue;
+    var sb = document.createElement('button'); sb.type = 'button'; sb.className = 'submit-btn'; sb.textContent = 'Lanjutkan';
+    sw.appendChild(l); sw.appendChild(sl); sw.appendChild(sb); ci.appendChild(sw);
+    sl.oninput = function(){ document.getElementById('sliderVal').textContent = sl.value; };
+    sb.onclick = function(){ handleAnswer(sl.value + ' / 10', step); };
+  } else if (step.inputType === 'text') {
+    var ta = document.createElement('textarea'); ta.className = 'text-input'; ta.placeholder = step.placeholder || '';
+    var tb = document.createElement('button'); tb.type = 'button'; tb.className = 'submit-btn'; tb.textContent = 'Lanjutkan';
+    ci.appendChild(ta); ci.appendChild(tb); addSkip(ci, step);
+    tb.onclick = function(){ var v = ta.value.replace(/^\s+|\s+$/g, ''); if (v) handleAnswer(v, step); };
+    ta.onkeydown = function(e){ if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); tb.click(); } };
+    ta.focus();
+  } else if (step.inputType === 'number') {
+    var ni = document.createElement('input'); ni.type = 'number'; ni.className = 'date-input'; ni.min = 1; ni.max = 120; ni.step = 1; ni.inputMode = 'numeric'; ni.placeholder = 'Tulis usia Anda (tahun)...';
+    var nb = document.createElement('button'); nb.type = 'button'; nb.className = 'submit-btn'; nb.disabled = true; nb.textContent = 'Isi usia terlebih dahulu';
+    ci.appendChild(ni); ci.appendChild(nb);
+    function okAge(){ var v = parseInt(ni.value, 10); return v >= 1 && v <= 120; }
+    ni.oninput = function(){ var ok = okAge(); nb.disabled = !ok; nb.textContent = ok ? 'Lanjutkan' : 'Isi usia terlebih dahulu'; };
+    nb.onclick = function(){ if (okAge()) handleAnswer(String(parseInt(ni.value, 10)), step); };
+    ni.onkeydown = function(e){ if (e.key === 'Enter') { e.preventDefault(); nb.click(); } };
+    ni.focus();
+  } else if (step.inputType === 'date') {
+    var di = document.createElement('input'); di.type = 'date'; di.className = 'date-input';
+    var n = new Date(); di.max = n.getFullYear() + '-' + ('0' + (n.getMonth()+1)).slice(-2) + '-' + ('0' + n.getDate()).slice(-2);
+    var db = document.createElement('button'); db.type = 'button'; db.className = 'submit-btn'; db.disabled = true; db.textContent = 'Pilih tanggal terlebih dahulu';
+    ci.appendChild(di); ci.appendChild(db); addSkip(ci, step);
+    di.onchange = function(){ if (di.value) { db.disabled = false; db.textContent = 'Lanjutkan'; } };
+    db.onclick = function(){ if (di.value) handleAnswer(di.value, step); };
+  }
+}
+
+function handleAnswer(answer, step, skipped){
+  if (isProcessing) return; isProcessing = true;
+  userAnswers[step.id] = skipped ? '' : answer;
+  addUserMessage(skipped ? 'Lewati' : (step.id === 'usia' ? answer + ' tahun' : answer));
+  var ci = document.getElementById('chatInput'); if (ci) ci.innerHTML = '';
+  function next(ms){
+    setTimeout(function(){
+      isProcessing = false;
+      try { askQuestion(currentStep + 1); }
+      catch(e){ isProcessing = false; hideTyping(); addBotMessage('Maaf, terjadi gangguan teknis. Muat ulang halaman untuk mengulang.'); if (DEBUG) throw e; }
+    }, ms);
+  }
+
+  if (!skipped && step.inputType === 'text' && hasCrisisSignal(answer)) {
+    userAnswers.crisisFlag = true; showTyping();
+    setTimeout(function(){
+      hideTyping();
+      addBotMessage('Terima kasih sudah jujur, {name}. Yang Anda tulis membuat saya khawatir, dan Anda tidak perlu menanggungnya sendirian. Tolong segera hubungi orang yang Anda percaya, atau layanan kesehatan jiwa: <strong>' + CRISIS_HOTLINE + '</strong>. Jika Anda dalam bahaya sekarang, hubungi layanan darurat setempat.', null, 'crisis-bubble');
+      next(3000);
+    }, 800);
+    return;
+  }
+  if (!skipped && step.needsValidation && step.inputType === 'text') {
+    showTyping();
+    setTimeout(function(){ hideTyping(); addBotMessage(getValidation(step.validationType), null, 'validation-bubble'); next(1400); }, 1000);
+  } else { next(400); }
+}
+
+function showSummary(){
+  track('LC_Complete');
+  var pf = document.getElementById('progressFill'); if (pf) pf.style.width = '100%';
+  showTyping();
+  setTimeout(function(){
+    hideTyping();
+    addBotMessage('Perjalanan kita hari ini telah selesai, {name}. Terima kasih atas kejujuran Anda.');
+    setTimeout(function(){
+      var worry = parseInt(userAnswers.worry, 10) || 0;
+      var wi = 'Kecemasan Anda terkendali. Waktu yang baik untuk menguatkan fondasi batin.';
+      if (worry >= 8) wi = 'Kecemasan Anda sedang tinggi. Anda layak mendapat dukungan.';
+      else if (worry >= 5) wi = 'Kecemasan Anda nyata dan layak diperhatikan.';
+      var di = String(userAnswers.dendam || '').indexOf('Ya') === 0
+        ? 'Ada seseorang yang belum Anda lepaskan. Mengampuni adalah proses, dan bisa dimulai dengan langkah kecil.'
+        : 'Hati Anda terasa lebih ringan dalam hal pengampunan. Teruskanlah.';
+      var mi = String(userAnswers.motivasi || '').indexOf('Lebih intens') === 0
+        ? 'Anda lebih intens mencari Tuhan saat krisis. Itu manusiawi; waktu kecil yang rutin di masa tenang bisa menjadi jangkar.'
+        : 'Anda cukup stabil dalam relasi dengan Tuhan di berbagai musim.';
+            var h = '<div class="summary-card"><h4>📜 Peta Hati ' + escapeHtml(userAnswers.nama || 'Anda') + '</h4>';
+      h += '<div class="summary-item"><strong>Kondisi</strong>' + escapeHtml(userAnswers.cond1 || '-') + '</div>';
+      h += '<div class="summary-item"><strong>Kecemasan</strong>' + escapeHtml(userAnswers.worry || '-') + '<br><em>' + wi + '</em></div>';
+      if (userAnswers.bisikan) h += '<div class="summary-item"><strong>Bisikan Negatif</strong>"' + escapeHtml(userAnswers.bisikan) + '"</div>';
+      h += '<div class="summary-item"><strong>Pengampunan</strong><em>' + di + '</em></div>';
+      h += '<div class="summary-item"><strong>Pola Mencari Tuhan</strong><em>' + mi + '</em></div>';
+      if (userAnswers.penyerahan) h += '<div class="summary-item"><strong>Komitmen Baru</strong>"' + escapeHtml(userAnswers.penyerahan) + '"</div>';
+      h += '</div>';
+      if (userAnswers.crisisFlag || worry >= 9) {
+        h += '<div class="summary-card" style="border-color:#D9822B;margin-top:12px"><h4>Butuh teman bicara?</h4><div class="summary-item" style="border:none">Jika beban terasa terlalu berat, hubungi ' + CRISIS_HOTLINE + ' atau psikolog/psikiater terdekat.</div></div>';
+      }
+      var msg = encodeURIComponent('Halo, saya ' + (userAnswers.nama || '') + '. Saya sudah mengisi Peta Hati di LifeCode dan ingin booking sesi 1-on-1.');
+      h += '<div class="final-cta"><h4>🌿 Langkah Berikutnya</h4><p>Baca Peta Hati ini bersama-sama dan susun satu langkah nyata dalam sesi 1-on-1. Pesan yang terkirim hanya berisi nama Anda; jawaban refleksi tidak ikut terkirim.</p>' +
+           '<a id="bookingLink" href="' + BOOKING_URL + '?text=' + msg + '" target="_blank" rel="noopener">Booking Sesi 1-on-1</a></div>';
+      addRawBotMessage(h);
+      var bl = document.getElementById('bookingLink');
+      if (bl) bl.addEventListener('click', function(){ track('LC_BookingClick'); });
+      var ci = document.getElementById('chatInput');
+      if (ci) ci.innerHTML = '<p style="text-align:center;color:#6B6B6B;font-size:.85rem;padding:8px">Belum siap? Tidak apa-apa. Jawaban Anda hanya ada di layar ini dan tidak disimpan di server. 🌿</p>';
+    }, 900);
+  }, 1000);
+}
+
+document.getElementById('startBtn').addEventListener('click', startJourney);
+</script>
+
+</body>
+</html>
