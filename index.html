@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>prayer.my.id - Inner block dalam Hati</title>
+<title>prayer.my.id - Inner Block dalam Hati</title>
 <!-- FB Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -15,7 +15,6 @@ fbq('track', 'PageView');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* [SEMUA CSS ANDA TETAP SAMA, TIDAK DIUBAH AGAR TAMPILAN TETAP KONSISTEN] */
 body{background:#f4f3f0;margin:0;padding:20px;min-height:100vh;-webkit-tap-highlight-color:transparent}
 .lc-app-root{--ink:#111116;--ink-2:#2B2B36;--ink-3:#58586F;--ink-4:#8E8EA8;--surface:#F9F8F6;--card:#FFF;--gold:#A68026;--gold-pale:#FDFBF6;--gold-mid:#CBB067;--teal:#14594A;--teal-pale:#E6F4F1;--red:#B52A2A;--red-pale:#FDF1F1;--amber:#D9822B;--amber-pale:#FFF4E5;--border:rgba(17,17,22,.08);--border-md:rgba(17,17,22,.12);--fd:'Playfair Display',Georgia,serif;--fb:'Outfit',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;--r:20px;--r-sm:12px;font-family:var(--fb);color:var(--ink);width:100%;display:flex;justify-content:center;padding:10px 0}
 .lc-app-root *{box-sizing:border-box;margin:0;padding:0}
@@ -30,18 +29,18 @@ body{background:#f4f3f0;margin:0;padding:20px;min-height:100vh;-webkit-tap-highl
 .eyebrow{display:inline-block;background:var(--gold-pale);color:var(--gold);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:6px;margin-bottom:16px;border:1px solid rgba(166,128,38,.25)}
 .hero-title{font-family:var(--fd);font-size:31px;font-weight:900;line-height:1.2;margin-bottom:14px}
 .hero-title em{font-style:normal;color:var(--gold)}
-.hero-desc{font-size:14.5px;color:var(--ink-3);line-height:1.65;margin-bottom:16px}
-.hero-desc strong{color:var(--ink)}
-.hero-verse{font-family:var(--fd);font-size:18px;font-style:italic;color:var(--ink-2);line-height:1.5;margin-bottom:16px;padding:12px;background:rgba(166,128,38,0.08);border-radius:8px;border-left:3px solid var(--gold)}
-.hero-blocks{font-size:13px;margin-top:12px;padding:14px;background:rgba(166,128,38,0.08);border-radius:8px;border-left:3px solid var(--gold);color:var(--ink-2);line-height:1.6}
+.hero-def{font-size:14px;color:var(--ink-3);line-height:1.6;margin-bottom:6px}
 .btn-prim{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:17px 24px;background:var(--ink);color:#fff;border:none;border-radius:var(--r-sm);font-family:var(--fb);font-size:15.5px;font-weight:700;cursor:pointer;transition:all .3s;text-decoration:none}
 .btn-prim:hover{background:var(--ink-2);transform:translateY(-2px)}
 .btn-prim.gold{background:var(--gold)}
 .btn-prim.gold:hover{background:var(--gold-mid)}
 .btn-prim:disabled{background:#D6D6E0;cursor:not-allowed;transform:none}
 .hero-cta{padding:19px 24px;font-size:16.5px;box-shadow:0 10px 28px rgba(166,128,38,.28)}
+.sec-cta{margin-top:20px}
 button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid rgba(166,128,38,.45);outline-offset:2px}
-.cta-note{text-align:center;font-size:12.5px;color:var(--ink-3);margin-top:10px}
+.cta-note{text-align:center;font-size:12.5px;color:var(--ink-2);margin-top:10px;line-height:1.55}
+.chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.chip{padding:6px 12px;border-radius:20px;background:#fff;border:1px solid rgba(166,128,38,.3);font-size:12.5px;font-weight:600;color:var(--ink-2)}
 .badge-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:18px}
 .bdg{padding:6px 14px;border-radius:20px;font-size:12.5px;font-weight:700}
 .bdg-green{background:var(--teal-pale);color:var(--teal)}
@@ -49,6 +48,7 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
 .bdg-blue{background:#F0F4F8;color:#3A5B80}
 
 .chat-section{margin-top:28px;opacity:0;max-height:0;overflow:hidden;transition:opacity .5s ease, max-height .6s ease, margin-top .4s ease}
+.chat-section:not(.open){margin-top:0}
 .chat-section.open{opacity:1;max-height:5000px;overflow:visible}
 .chat-section.open + .badge-row{margin-top:18px}
 .chat-card{background:var(--card);border-radius:var(--r);border:1px solid var(--border-md);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 8px 24px rgba(17,17,22,.06)}
@@ -98,6 +98,9 @@ textarea.field-input{resize:vertical;min-height:68px}
 .bar i{display:block;height:100%;background:var(--gold-mid)}
 .bar.hope i{background:var(--teal)}
 .sum-card.warn{background:var(--amber-pale);border-color:var(--amber);margin-top:12px}
+.sample{margin-top:4px}
+.sample .tag{display:inline-block;font-size:11px;font-weight:700;color:var(--ink-3);background:var(--surface);border:1px solid var(--border-md);border-radius:6px;padding:3px 8px;margin-bottom:10px}
+.sample .sum-item{border-bottom:none;padding:6px 0}
 .rep-card{background:var(--card);border:1.5px solid var(--gold);border-radius:var(--r-sm);padding:20px}
 .rep-card h4{font-family:var(--fd);font-size:19px;font-weight:800;margin-bottom:6px}
 .rep-card>p{font-size:13.5px;color:var(--ink-3);line-height:1.6;margin-bottom:16px}
@@ -140,6 +143,7 @@ textarea.field-input{resize:vertical;min-height:68px}
 .step>span{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--fd);font-weight:800;display:flex;align-items:center;justify-content:center}
 .step b{display:block;font-size:14.5px;margin-bottom:2px}
 .step p{font-size:12.5px;color:var(--ink-3);line-height:1.6}
+.trust{font-size:12.5px;color:var(--ink-3);line-height:1.6;text-align:center;margin-top:14px}
 .about{display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--surface);border:1px solid var(--border-md);border-radius:var(--r-sm);padding:28px 20px}
 .about-photo{width:110px;height:110px;border-radius:50%;object-fit:cover;border:2px solid var(--gold-mid);padding:3px;background:var(--card);box-shadow:0 6px 16px rgba(166,128,38,0.12);margin-bottom:18px}
 .about-text{text-align:left;width:100%}
@@ -180,26 +184,32 @@ textarea.field-input{resize:vertical;min-height:68px}
 </head>
 <body>
 <div class="lc-app-root" id="lifecode-root">
-  <div class="sticky" id="lc-sticky"><button type="button" class="btn-prim gold" onclick="LC.open()">Mulai Refleksi Gratis →</button></div>
+  <div class="sticky" id="lc-sticky"><button type="button" class="btn-prim gold" onclick="LC.open()">Lihat Peta Hati Saya (5 menit)</button></div>
   <div class="shell">
     <div class="prog-track"><div class="prog-fill" style="width:100%"></div></div>
-    <div class="header"><div class="logo-name">prayer.my.id</div><div class="logo-sub">Clear Heart &amp; Insight</div></div>
+    <div class="header"><div class="logo-name">prayer.my.id</div><div class="logo-sub">Clear Heart &amp; Mind</div></div>
     <div class="body">
+      <!-- 1. Hero + ajakan utama -->
       <div class="hero">
         <div class="eyebrow">Refleksi Rohani 5 Menit</div>
-        <h1 class="hero-title">Doa terasa sulit? Mungkin ada <em> Inner Block</em> di Hati Anda.</h1>
-        <p class="hero-verse">"Doa orang yang benar sangat besar kuasanya"</p>
-        <p class="hero-blocks"><strong>"12 Emosi" Inner Block Proses Doa Anda:</strong><br>Marah, Sakit Hati, Kecewa, Dendam, Kepahitan, Rasa Bersalah, Malu, Takut, Cemas, Ragu, Kesombongan, dan Putus Asa.</p>
+        <h1 class="hero-title">Doa terasa sulit? Mungkin ada <em>Inner Block</em> di hati Anda.</h1>
+        <p class="hero-def">Inner Block adalah perasaan yang tersimpan dan diam-diam menahan Anda berdoa dengan lega.</p>
       </div>
-      <button id="lc-start" class="btn-prim gold hero-cta" type="button" onclick="LC.open()">Mulai Refleksi 5 Menit</button>
-      <p class="cta-note">Gratis · tanpa daftar akun · jawaban Anda bersifat rahasia</p>
+      <button id="lc-start" class="btn-prim gold hero-cta" type="button" onclick="LC.open()">Lihat Peta Hati Saya (5 menit)</button>
+      <p class="cta-note"><strong>Gratis · tanpa daftar akun · jawaban Anda rahasia<br>Refleksi edukatif, bukan diagnosis atau pengganti tenaga profesional.</strong></p>
 
+
+      <!-- 2. Kepercayaan -->
+      <div class="badge-row" id="lc-badges"><span class="bdg bdg-green">✓ 100% Gratis</span><span class="bdg bdg-gold">Peta Hati Pribadi</span><span class="bdg bdg-blue">🔒 Rahasia</span></div>
+
+
+      <!-- 3. Chat kuis (membuka di sini) -->
       <div class="chat-section" id="lc-chat-section" role="region" aria-labelledby="lc-chat-title" aria-hidden="true">
         <div class="chat-card">
           <div class="prog-track"><div class="prog-fill" id="lc-prog" style="width:0%"></div></div>
           <div class="chat-head">
             <div class="chat-ava">🕊️</div>
-            <div class="chat-title"><h3 id="lc-chat-title">Natanael</h3><p>Pendamping Refleksi Digital</p></div>
+            <div class="chat-title"><h3 id="lc-chat-title">Natanael</h3><p>Asisten digital refleksi (bukan manusia)</p></div>
             <button type="button" class="chat-close" id="lc-close" aria-label="Tutup chat refleksi">✕</button>
           </div>
           <div class="chat-msgs" id="lc-msgs" role="log" aria-live="polite"></div>
@@ -207,51 +217,76 @@ textarea.field-input{resize:vertical;min-height:68px}
         </div>
       </div>
 
-      <div class="badge-row" id="lc-badges"><span class="bdg bdg-green">✓ 100% Gratis</span><span class="bdg bdg-gold">Peta Hati Pribadi</span><span class="bdg bdg-blue">🔒 Confidential</span></div>
 
+      <!-- 4. Relevansi: apa yang dirasakan -->
       <section class="sec"><h2 class="sec-title">Apakah ini yang Anda rasakan?</h2><p class="sec-sub">Anda tidak sendirian dalam pergumulan ini.</p>
         <div class="pain-grid">
           <div class="pain"><b>Marah &amp; kecewa</b><span>Pada keadaan, orang lain, atau bahkan pada Tuhan.</span></div>
-          <div class="pain"><b>Iman vs Realita</b><span>Hati tahu Tuhan bekerja, namun pikiran ragu-ragu.</span></div>
+          <div class="pain"><b>Iman vs kenyataan</b><span>Hati tahu Tuhan bekerja, tetapi pikiran ragu.</span></div>
           <div class="pain"><b>Sulit mengampuni</b><span>Melepaskan orang yang melukai Anda.</span></div>
           <div class="pain"><b>Lelah menunggu</b><span>Sudah berdoa dan berusaha, jawaban belum terlihat.</span></div>
         </div>
       </section>
-      <div class="quote-block">"Carilah terlebih dahulu Kerajaan Allah dan kebenarannya, maka semuanya itu akan ditambahkan kepadamu."<span>Matius 6:33</span></div>
+      <div class="quote-block">"Marilah kepada-Ku, semua yang letih lelah dan berbeban berat, Aku akan memberi kamu istirahat."<span>Matius 11:28</span></div>
 
-      <section class="sec"><h2 class="sec-title">Cara kerjanya</h2><p class="sec-sub">Tiga langkah sederhana, langsung dari HP Anda.</p>
-        <div class="steps">
-          <div class="step"><span>1</span><div><b>Jawab 10 pernyataan singkat</b><p>Pilih seberapa sering Anda merasakannya. Tidak ada jawaban benar atau salah.</p></div></div>
-          <div class="step"><span>2</span><div><b>Terima Peta Hati seketika</b><p>Inner block dominan Anda, refleksi, dan satu langkah kecil langsung tampil.</p></div></div>
-          <div class="step"><span>3</span><div><b>Klaim Free Report via WhatsApp</b><p>Laporan karakter &amp; inner block dikirim ke WhatsApp Anda setelah Anda mengklik tombol konfirmasi.</p></div></div>
+
+      <!-- 5. Apa yang akan dikenali -->
+      <section class="sec"><h2 class="sec-title">8 Inner Block yang akan kita kenali</h2><p class="sec-sub">Hasil refleksi menunjukkan mana yang paling dominan pada Anda saat ini.</p>
+        <div class="chips">
+          <span class="chip">Kekecewaan</span><span class="chip">Kelelahan Berharap</span><span class="chip">Keraguan</span><span class="chip">Ketakutan</span>
+          <span class="chip">Kemarahan</span><span class="chip">Kebutuhan Mengendalikan</span><span class="chip">Rasa Bersalah</span><span class="chip">Merasa Tidak Layak</span>
+        </div>
+        <div class="quote-block">"Curahkanlah isi hatimu di hadapan-Nya."<span>Mazmur 62:9</span></div>
+      </section>
+
+      <!-- 6. Contoh hasil -->
+      <section class="sec"><h2 class="sec-title">Seperti inilah Peta Hati Anda</h2><p class="sec-sub">Hasilnya langsung tampil, lengkap dengan satu langkah kecil.</p>
+        <div class="sum-card sample">
+          <span class="tag">Contoh ilustrasi, bukan hasil orang sungguhan</span>
+          <h4>📜 Peta Hati Maria</h4>
+          <div class="sum-item"><strong>Inner Block dominan</strong><b>Kekecewaan</b></div>
+          <div class="bar-row"><span><em>Kekecewaan</em><em>78</em></span><div class="bar"><i style="width:78%"></i></div></div>
+          <div class="bar-row"><span><em>Kelelahan Berharap</em><em>61</em></span><div class="bar"><i style="width:61%"></i></div></div>
+          <div class="bar-row"><span><em>Keraguan</em><em>44</em></span><div class="bar"><i style="width:44%"></i></div></div>
+          <div class="sum-item"><strong>Refleksi</strong>Kecewa muncul saat harapan belum bertemu kenyataan. Mengakuinya adalah kejujuran, bukan kurang iman.<span class="stp">Langkah kecil: sebutkan kekecewaan Anda kepada Tuhan apa adanya selama 2 menit.</span></div>
         </div>
       </section>
 
+      <!-- 7. Cara kerja + ajakan -->
+      <section class="sec"><h2 class="sec-title">Cara kerjanya</h2><p class="sec-sub">Tiga langkah, langsung dari HP Anda.</p>
+        <div class="steps">
+          <div class="step"><span>1</span><div><b>Jawab 10 pernyataan singkat</b><p>Pilih seberapa sering Anda merasakannya. Tidak ada jawaban benar atau salah.</p></div></div>
+          <div class="step"><span>2</span><div><b>Terima Peta Hati seketika</b><p>Inner Block dominan, refleksi, dan satu langkah kecil langsung tampil.</p></div></div>
+          <div class="step"><span>3</span><div><b>Terima laporan lewat WhatsApp</b><p>Laporan lengkap dikirim setelah Anda menekan tombol konfirmasi.</p></div></div>
+        </div>
+        <p class="trust">Nomor WhatsApp hanya dipakai untuk mengirim laporan Anda. Tidak ada pembayaran, tidak ada langganan.</p>
+        <button class="btn-prim gold sec-cta" type="button" onclick="LC.open()">Mulai Refleksi 5 Menit</button>
+      </section>
+
+      <!-- 8. Pembuat -->
       <section class="sec">
         <div class="about">
-          <img src="https://iili.io/nckS2qP.png" alt="Vell, Creator prayer.my.id" class="about-photo">
+          <img src="https://iili.io/nckS2qP.png" alt="Vell, pembuat prayer.my.id" class="about-photo" width="110" height="110" loading="lazy" decoding="async" referrerpolicy="no-referrer">
           <div class="about-text">
-            <p>Halo, saya <strong>Vell</strong>, Creator <strong>prayer.my.id</strong>.</p>
+            <p>Halo, saya <strong>Vell</strong>, pembuat <strong>prayer.my.id</strong>.</p>
             <p>Sebagai ayah tunggal dari 2 anak, saya pernah melewati masa-masa berat: merawat ibu yang sakit stroke dan ayah dengan penyakit jantung, serta kehilangan istri tercinta karena kanker.</p>
-            <p>Dari perjalanan itulah, saya tergerak untuk mendampingi Anda mengenali pola emosi dan iman berdasarkan pengalaman saya melalui <strong>Science</strong> dan <strong>Religion</strong>.</p>
-            <p class="about-disclaimer">
-              *Ini adalah pendampingan refleksi secara rohani, bukan pengganti terapi medis, layanan psikologis atau layanan darurat.
-            </p>
+            <p>Dari perjalanan itulah, saya tergerak untuk mendampingi Anda mengenali pola emosi dan iman berdasarkan pengalaman pribadi dan refleksi iman saya.</p>
+            <p class="about-disclaimer">*Ini adalah pendampingan refleksi rohani, bukan pengganti terapi medis, layanan psikologis, atau layanan darurat.</p>
           </div>
         </div>
         <div class="tl" aria-label="Perjalanan hidup Vell">
           <h2 class="tl-title">Perjalanan Vell</h2><p class="tl-sub">Mengapa prayer.my.id lahir dari pengalaman hidup yang tidak mudah</p>
           <ol class="tl-list">
             <li><span class="tl-num">25</span><div class="tl-card"><span class="tl-tag">25 tahun</span><b>Merawat ibu yang sakit stroke</b><p>Seperempat abad belajar sabar, lelah, dan setia dalam pelayanan sehari-hari.</p></div></li>
-            <li><span class="tl-num">13</span><div class="tl-card"><span class="tl-tag">13 tahun</span><b> Usia pernikahan dan membangun keluarga</b><p>Menjalani peran sebagai suami dan ayah bagi 2 anak.</p></div></li>
+            <li><span class="tl-num">13</span><div class="tl-card"><span class="tl-tag">13 tahun</span><b>Usia pernikahan dan membangun keluarga</b><p>Menjalani peran sebagai suami dan ayah bagi 2 anak.</p></div></li>
             <li><span class="tl-num">🕊</span><div class="tl-card"><span class="tl-tag">Kehilangan</span><b>Istri dipanggil Tuhan karena kanker</b><p>Masa berduka yang menguji iman secara nyata.</p></div></li>
-            <li><span class="tl-num">1</span><div class="tl-card"><span class="tl-tag">Single parent</span><b>Ayah tunggal dari 2 anak</b><p>Membesarkan anak sambil terus bertumbuh dalam iman.</p></div></li>
+            <li><span class="tl-num">1</span><div class="tl-card"><span class="tl-tag">Ayah tunggal</span><b>Ayah tunggal dari 2 anak</b><p>Membesarkan anak sambil terus bertumbuh dalam iman.</p></div></li>
           </ol>
-          <div class="tl-quote">"Setiap Masalah adanya masanya dan Tuhan tetap hadir dalam setiap musim."<span>— Vell, Creator prayer.my.id</span></div>
+          <div class="tl-quote">"Setiap masalah ada masanya, dan Tuhan tetap hadir dalam setiap musim."<span>Vell, pembuat prayer.my.id</span></div>
         </div>
       </section>
 
-      <div class="legal-disclaimer"><strong>Disclaimer:</strong> prayer.my.id adalah platform edukasi dan alat bantu refleksi diri. Hasilnya bersifat edukatif dan reflektif, bukan diagnosis psikologis, medis, atau psikiatris, dan tidak menggantikan psikolog, psikiater, atau tenaga medis profesional. Jika Anda mengalami tekanan emosional berat atau krisis, segera hubungi profesional berlisensi.</div>
+      <div class="legal-disclaimer"><strong>Disclaimer:</strong> prayer.my.id adalah platform edukasi dan alat bantu refleksi diri. Hasilnya bersifat edukatif dan reflektif, bukan diagnosis psikologis, medis, atau psikiatris, dan tidak menggantikan psikolog, psikiater, atau tenaga medis profesional. Jika Anda mengalami tekanan emosional berat atau krisis, segera hubungi profesional berlisensi atau layanan kesehatan jiwa 119 ext. 8.<br><br>Halaman ini memakai Facebook Pixel untuk mengukur iklan. Jawaban kuis tidak dikirim ke pihak ketiga.</div>
     </div>
   </div>
 </div>
@@ -263,7 +298,7 @@ textarea.field-input{resize:vertical;min-height:68px}
   let USER_REF = 'DIRECT';
   const HOTLINE = '119 ext. 8 (layanan kesehatan jiwa Kemenkes)';
   const CRISIS_WORDS = ['bunuh diri','mengakhiri hidup','ingin mati','tidak ingin hidup','tak ingin hidup','tidak ingin lanjut hidup','tidak mau hidup','menyakiti diri','melukai diri','akhiri hidup','lebih baik mati','capek hidup'];
-  const REPORT_NAME = 'Free Report Karakter &amp; Inner block prayer.my.id', REPORT_PLAIN = 'free report karakter & inner block';
+  const REPORT_NAME = 'Laporan Gratis Karakter &amp; Inner Block prayer.my.id', REPORT_PLAIN = 'laporan gratis karakter & inner block';
   const LABELS = ['Tidak pernah','Jarang','Kadang-kadang','Sering','Sangat sering'];
   const BULAN = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
 
@@ -395,10 +430,10 @@ textarea.field-input{resize:vertical;min-height:68px}
         bot('Satu hal terakhir, ' + nm() + '. Langkah nyata apa yang ingin Anda ambil minggu ini sebagai bentuk ketaatan baru? (boleh dilewati)');
         textInput('Tuliskan komitmen Anda...', true, function (v, skipped) {
           penyerahan = skipped ? '' : v; user(skipped ? 'Lewati' : v); clearInput();
-          if (!skipped && hasCrisis(v)) { 
-            crisisFlag = true; 
-            typing(800, function () { bot('Terima kasih sudah jujur, ' + nm() + '. Anda tidak perlu menanggungnya sendirian. Tolong segera hubungi orang yang Anda percaya, atau layanan kesehatan jiwa: <strong>' + HOTLINE + '</strong>. Jika Anda dalam bahaya sekarang, hubungi layanan darurat setempat.', 'crisis'); setTimeout(summary, 3000); }); 
-            return; 
+          if (!skipped && hasCrisis(v)) {
+            crisisFlag = true;
+            typing(800, function () { bot('Terima kasih sudah jujur, ' + nm() + '. Anda tidak perlu menanggungnya sendirian. Tolong segera hubungi orang yang Anda percaya, atau layanan kesehatan jiwa: <strong>' + HOTLINE + '</strong>. Jika Anda dalam bahaya sekarang, hubungi layanan darurat setempat.', 'crisis'); setTimeout(summary, 3000); });
+            return;
           }
           setTimeout(summary, 400);
         });
@@ -490,12 +525,12 @@ textarea.field-input{resize:vertical;min-height:68px}
         const bl = tglLahir ? blessing(tglLahir) : null;
         if (bl) h += '<div class="sum-item"><strong>Umur Berkat</strong>' + bl.days + ' hari (' + bl.years + ' tahun) ditopang</div>';
         if (R.dom.length) {
-          h += '<div class="sum-item"><strong>Inner block dominan</strong>Inner block dominan Anda saat ini: ' + R.dom.map(function (k) { return '<b>' + B[k].n + '</b>'; }).join(' dan ') + '.</div>';
+          h += '<div class="sum-item"><strong>Inner Block dominan</strong>Inner Block dominan Anda saat ini: ' + R.dom.map(function (k) { return '<b>' + B[k].n + '</b>'; }).join(' dan ') + '.</div>';
           R.dom.forEach(function (k) { h += '<div class="sum-item"><strong>Refleksi: ' + B[k].n + '</strong>' + B[k].r + '<span class="stp">Langkah kecil: ' + B[k].s + '</span></div>'; });
         } else {
           h += '<div class="sum-item"><strong>Profil</strong>Hati Anda relatif tenang saat ini. Ini waktu yang baik untuk menguatkan fondasi batin lewat kebiasaan doa yang ringan dan rutin.</div>';
         }
-        h += '<div class="sum-item"><strong>Peta semua block</strong>';
+        h += '<div class="sum-item"><strong>Peta semua Inner Block</strong>';
         R.rank.forEach(function (k) { h += '<div class="bar-row"><span><em>' + B[k].n + '</em><em>' + R.s[k] + '</em></span><div class="bar"><i style="width:' + R.s[k] + '%"></i></div></div>'; });
         h += '<div class="bar-row"><span><em>🌿 Sumber harapan</em><em>' + R.hope + '</em></span><div class="bar hope"><i style="width:' + R.hope + '%"></i></div></div></div>';
         if (penyerahan) h += '<div class="sum-item"><strong>Komitmen Baru</strong>"' + esc(penyerahan) + '"</div>';
@@ -514,7 +549,7 @@ textarea.field-input{resize:vertical;min-height:68px}
       setTimeout(function () {
         const h = '<div class="rep-card" id="lc-rep"><h4>🎁 ' + REPORT_NAME + '</h4>' +
           '<p>Isi data berikut, centang persetujuan, lalu kirim. Laporan akan dikirim ke WhatsApp Anda <strong>setelah Anda mengklik tombol konfirmasi</strong>.</p>' +
-          '<div class="rep-field"><span class="rep-label">Gender Anda *</span><div class="rep-radio"><label><input type="radio" name="lc-g" value="Male"> Male</label><label><input type="radio" name="lc-g" value="Female"> Female</label></div></div>' +
+          '<div class="rep-field"><span class="rep-label">Jenis Kelamin *</span><div class="rep-radio"><label><input type="radio" name="lc-g" value="Male"> Laki-laki</label><label><input type="radio" name="lc-g" value="Female"> Perempuan</label></div></div>' +
           '<div class="rep-field"><label class="rep-label" for="lc-wa">Nomor WhatsApp Aktif *</label><input type="tel" id="lc-wa" class="field-input" inputmode="tel" placeholder="Contoh: 0812XXXXXXXX"></div>' +
           '<div class="rep-field"><label class="rep-label" for="lc-tgl">Tanggal Lahir *</label><input type="date" id="lc-tgl" class="field-input" max="' + todayISO() + '" value="' + esc(tglLahir) + '"><div class="rep-hint">Minimal usia 18 tahun.</div></div>' +
           '<label class="rep-agree" for="lc-agree"><input type="checkbox" id="lc-agree"><span>Ya, saya bersedia menerima <strong>' + REPORT_PLAIN + '</strong> lewat WhatsApp, dan setuju data saya dikirim untuk menyusun laporan.</span></label>' +
@@ -542,20 +577,20 @@ textarea.field-input{resize:vertical;min-height:68px}
     const send = $('lc-send'), agree = $('lc-agree'); reportErr('');
     const gEl = document.querySelector('#lc-chat-section input[name="lc-g"]:checked');
     const w = normWA($('lc-wa').value), t = $('lc-tgl').value;
-    if (!gEl || !$('lc-wa').value.trim() || !t) { reportErr('Lengkapi gender, nomor WhatsApp, dan tanggal lahir Anda.'); return; }
+    if (!gEl || !$('lc-wa').value.trim() || !t) { reportErr('Lengkapi jenis kelamin, nomor WhatsApp, dan tanggal lahir Anda.'); return; }
     if (!/^\d{9,15}$/.test(w)) { reportErr('Nomor WhatsApp tidak valid. Contoh: 0812XXXXXXXX.'); return; }
     if (!ageOk(t)) { reportErr('Sistem mengidentifikasi usia kurang dari 18 tahun atau tanggal tidak valid.'); return; }
     if (!agree.checked) { reportErr('Centang persetujuan terlebih dahulu.'); return; }
     const used = parseInt(lsGet('lc_used') || '0', 10);
     if (used >= MAX_USE) { reportErr('Sistem mendeteksi limit akses tercapai. Silakan coba lagi esok hari.'); return; }
-    
-    // PERUBAHAN KRUSIAL: Hanya menyimpan data, BELUM mengirim WA
-    const payload = { 
-      action: 'save_data', // Menandakan ini hanya tahap penyimpanan
-      nama: nama, tgl_lahir: t, gender: gEl.value, wa: w, 
-      hasil_survey: surveyString(), jawaban_kegagalan: '', jawaban_bisikan: '', jawaban_penyerahan: penyerahan, ref: USER_REF 
+
+    // Tahap 1: hanya menyimpan data, BELUM mengirim WA
+    const payload = {
+      action: 'save_data',
+      nama: nama, tgl_lahir: t, gender: gEl.value, wa: w,
+      hasil_survey: surveyString(), jawaban_kegagalan: '', jawaban_bisikan: '', jawaban_penyerahan: penyerahan, ref: USER_REF
     };
-    
+
     send.disabled = true; send.innerHTML = '<span class="spin"></span> Menyimpan data...';
     fetch(SCRIPT_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) })
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
@@ -563,8 +598,8 @@ textarea.field-input{resize:vertical;min-height:68px}
         let d; try { d = JSON.parse(txt); } catch (e) { throw new Error('respons server tidak valid'); }
         if (d.status === 'rate_limited') throw new Error('terlalu sering, tunggu 1 menit lalu coba lagi');
         if (d.status === 'error') throw new Error(d.message || 'kesalahan server');
-        reportSent = true; lsSet('lc_used', String(used + 1)); track('LC_ReportSaved'); 
-        done(w, d); // Lanjut ke tampilan "Done"
+        reportSent = true; lsSet('lc_used', String(used + 1)); track('LC_ReportSaved');
+        done(w, d);
       })
       .catch(function (err) {
         reportErr('Data belum terkirim (' + ((err && err.message) || 'koneksi gagal') + '). Periksa internet Anda lalu coba lagi.');
@@ -575,30 +610,28 @@ textarea.field-input{resize:vertical;min-height:68px}
   function done(w, data) {
     const card = $('lc-rep'); if (!card) return;
     setProgress(100);
-    
-    // NLP Framing: Tombol ini membuat user merasa MEREKA yang meminta report, bukan kita yang spam.
-    const waText = `Halo prayer.my.id, saya ${nama} sudah selesai mengisi refleksi. Mohon kirimkan Free Report Karakter & Inner block saya.`;
+
+    const waText = `Halo prayer.my.id, saya ${nama} sudah selesai mengisi refleksi. Mohon kirimkan Laporan Gratis Karakter & Inner Block saya.`;
     const waLink = `https://wa.me/${WA_BUSINESS}?text=${encodeURIComponent(waText)}`;
-    
+
     card.innerHTML = '<div class="done"><div class="done-check">✓</div><h4>Data Anda berhasil disimpan</h4>' +
-      '<p>Hi <strong>' + esc(nama) + '</strong>, untuk menjaga privasi dan memastikan Anda benar-benar menerima laporan ini, silakan klik tombol di bawah ini. <br><br><strong>Ini akan membuka WhatsApp Anda dan secara otomatis meminta kami mengirimkan report Anda.</strong></p>' +
-      '<a class="btn-prim wa-btn" id="lc-wa-link" href="' + waLink + '" target="_blank" rel="noopener">💬 Buka WhatsApp & Terima Report Sekarang</a>' +
+      '<p>Hi <strong>' + esc(nama) + '</strong>, untuk menjaga privasi dan memastikan Anda benar-benar menerima laporan ini, silakan klik tombol di bawah ini. <br><br><strong>Ini akan membuka WhatsApp Anda dan secara otomatis meminta kami mengirimkan laporan Anda.</strong></p>' +
+      '<a class="btn-prim wa-btn" id="lc-wa-link" href="' + waLink + '" target="_blank" rel="noopener">💬 Buka WhatsApp & Terima Laporan Sekarang</a>' +
       '<div class="must-click"><strong>Penting:</strong> Klik tombol di atas untuk mengonfirmasi. Sistem kami baru akan mengirimkan laporan <em>setelah</em> Anda membuka chat WhatsApp ini, sesuai dengan kebijakan privasi Meta.</div>' +
-      '<div class="ig-cta"><p>Jika Anda Berkenan bisa Follow Instagram Saya:</p>' +
+      '<div class="ig-cta"><p>Jika Anda berkenan, silakan ikuti Instagram kami:</p>' +
       '<a href="https://instagram.com/ifeelsoolucky" target="_blank" rel="noopener" class="ig-link"><span>📸</span> @ifeelsoolucky</a></div></div>';
     scrollDown();
     const ci = clearInput(); if (ci) ci.innerHTML = '<p class="chat-note">Terima kasih, ' + esc(nama) + '. Silakan klik tombol WhatsApp di atas. 🌿</p>';
-    
-    // PERUBAHAN KRUSIAL: Saat user KLIK tombol WA, kita kirim sinyal ke server untuk BARU SEKARANG mengirim pesan.
+
+    // Tahap 2: saat tombol WA diklik, server baru mengirim laporan
     const waBtn = document.getElementById('lc-wa-link');
     if (waBtn) {
       waBtn.addEventListener('click', function () {
         track('LC_WhatsAppClick');
-        // Trigger backend untuk mengirim WA sekarang juga
-        fetch(SCRIPT_URL, { 
-          method: 'POST', 
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' }, 
-          body: JSON.stringify({ action: 'trigger_send_report', wa: w, nama: nama }) 
+        fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'trigger_send_report', wa: w, nama: nama })
         }).catch(function(err) { console.log('Trigger sent (or failed silently)', err); });
       });
     }
