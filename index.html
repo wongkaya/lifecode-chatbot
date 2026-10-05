@@ -42,7 +42,8 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
 .badge-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:18px}
 .bdg{padding:6px 14px;border-radius:20px;font-size:12.5px;font-weight:700}
 .bdg-green{background:var(--teal-pale);color:var(--teal)}.bdg-gold{background:var(--gold-pale);color:var(--gold);border:1px solid rgba(166,128,38,.25)}.bdg-rose{background:var(--rose-pale);color:var(--rose)}
-.chat-section{margin-top:28px;opacity:0;max-height:0;overflow:hidden;transition:opacity .5s ease,max-height .6s ease}
+.chat-section{margin-top:28px;opacity:0;max-height:0;overflow:hidden;transition:opacity .5s ease,max-height .6s ease,margin-top .4s ease}
+.chat-section:not(.open){margin-top:0}
 .chat-section.open{opacity:1;max-height:5000px;overflow:visible}
 .chat-card{background:var(--card);border-radius:var(--r);border:1px solid var(--border-md);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 8px 24px rgba(17,17,22,.06)}
 .chat-head{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--border);background:var(--gold-pale)}
@@ -50,11 +51,14 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
 .chat-title{flex:1;min-width:0}.chat-title h3{font-family:var(--fd);font-size:17px;font-weight:800;line-height:1.3}
 .chat-title p{font-size:11.5px;color:var(--ink-3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .chat-close{width:36px;height:36px;border-radius:50%;border:1px solid var(--border-md);background:#fff;font-size:16px;cursor:pointer;color:var(--ink-3);flex-shrink:0}
-.chat-msgs{padding:20px 16px;background:var(--surface);scroll-behavior:smooth;max-height:55vh;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.chat-msgs{padding:20px 16px;background:var(--surface);scroll-behavior:smooth;max-height:55vh;max-height:55dvh;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .msg{display:flex;gap:9px;margin-bottom:14px;align-items:flex-start}.msg.user{flex-direction:row-reverse}
 .msg-ava{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px}
 .msg.bot .msg-ava{background:var(--gold-pale);border:1px solid rgba(166,128,38,.3)}.msg.user .msg-ava{background:var(--ink);color:#fff}
+/* REVISI: hilangkan ikon hati ambigu di sisi jawaban user */
+.msg.user .msg-ava{display:none}
 .bubble{max-width:calc(100% - 50px);padding:12px 15px;border-radius:16px;font-size:15px;line-height:1.6;overflow-wrap:anywhere;word-wrap:break-word}
+.msg.user .bubble{max-width:85%}
 .msg.bot .bubble{background:var(--card);border:1px solid var(--border-md);border-bottom-left-radius:4px}
 .msg.user .bubble{background:var(--ink);color:#fff;border-bottom-right-radius:4px}
 .bubble.wide{max-width:100%;width:100%}
@@ -71,7 +75,9 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
 .opt-btn:hover,.opt-btn:active{border-color:var(--gold-mid);background:var(--gold-pale)}
 .opt-btn b{color:var(--gold);font-weight:800;font-size:13px;min-width:18px}
 .field-input{width:100%;padding:13px 15px;background:var(--surface);border:1.5px solid var(--border-md);border-radius:var(--r-sm);font-family:var(--fb);font-size:16px;color:var(--ink);display:block}
-textarea.field-input{resize:vertical;min-height:68px}
+/* REVISI: tanpa ikon resize, fokus satu garis emas lembut */
+textarea.field-input{resize:none;min-height:68px}
+textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(166,128,38,.18)}
 .chat-input .btn-prim{margin-top:10px;padding:14px 20px;font-size:14.5px}
 .skip-btn{display:block;width:100%;background:none;border:none;color:var(--ink-3);font-family:var(--fb);font-size:13px;text-decoration:underline;cursor:pointer;padding:10px 0 2px}
 .chat-note{text-align:center;color:var(--ink-3);font-size:13px;padding:6px;line-height:1.6}
@@ -129,10 +135,12 @@ textarea.field-input{resize:vertical;min-height:68px}
 .about .about-disclaimer{font-size:12px;color:var(--ink-4);font-style:italic;margin:14px 0 0;padding-top:14px;border-top:1px solid var(--border);line-height:1.5}
 .legal-disclaimer{font-size:11px;color:var(--ink-4);line-height:1.65;text-align:center;margin-top:16px}.legal-disclaimer strong{color:var(--ink-3)}
 .shell>.body>.legal-disclaimer{margin-bottom:64px}
+/* REVISI: redupkan konten di bawah chat saat kuis aktif */
+.chatting .sec,.chatting .quote-block{opacity:.3;transition:opacity .4s}
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:9999;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--border);transform:translateY(110%);visibility:hidden;transition:transform .35s,visibility 0s .35s}
 .sticky.show{transform:none;visibility:visible;transition-delay:0s}
 .sticky .btn-prim{max-width:448px;margin:0 auto;padding:14px 20px;font-size:15px}
-@media (max-width:520px){body{padding:0}.lc-app-root{padding:0}.shell{border-radius:0;border-left:none;border-right:none}.hero-title{font-size:25px}.hero{padding:28px 20px 4px;margin:-28px -20px 16px}.body{padding:24px 20px 20px}.bubble{max-width:calc(100% - 45px);font-size:14.5px;padding:11px 14px}.chat-msgs{max-height:60vh;padding:16px 14px}.opt-btn{font-size:14px;padding:12px 13px}.pain-grid{gap:8px}.pain{padding:12px}}
+@media (max-width:520px){body{padding:0}.lc-app-root{padding:0}.shell{border-radius:0;border-left:none;border-right:none}.hero-title{font-size:25px}.hero{padding:28px 20px 4px;margin:-28px -20px 16px}.body{padding:24px 20px 20px}.bubble{max-width:calc(100% - 45px);font-size:14.5px;padding:11px 14px}.msg.user .bubble{max-width:85%}.chat-msgs{max-height:50vh;max-height:50dvh;padding:16px 14px}.opt-btn{font-size:14px;padding:12px 13px}.pain-grid{gap:8px}.pain{padding:12px}}
 @media (prefers-reduced-motion:reduce){.chat-section,.prog-fill{transition:none}.typing span{animation:none;opacity:.6}.chat-msgs{scroll-behavior:auto}}
 </style>
 </head>
@@ -186,7 +194,7 @@ textarea.field-input{resize:vertical;min-height:68px}
 <div class="steps">
 <div class="step"><span>1</span><div><b>Isi tanggal lahir &amp; jawab 12 pernyataan</b><p>Pilih seberapa sering Anda merasakannya. Tidak ada jawaban benar atau salah.</p></div></div>
 <div class="step"><span>2</span><div><b>Terima Peta Emosi seketika</b><p>Emotional block dominan, refleksi, dan satu langkah kecil langsung tampil.</p></div></div>
-<div class="step"><span>3</span><div><b>Terima laporan lewat WhatsApp</b><p>Laporan karakter &amp; emotional block dikirim ke WhatsApp Anda.</p></div></div>
+<div class="step"><span>3</span><div><b>Terima laporan lewat WhatsApp</b><p>Laporan lengkap dikirim setelah Anda menekan tombol konfirmasi.</p></div></div>
 </div>
 <p class="trust">Nomor WhatsApp hanya dipakai untuk mengirim laporan Anda. Tanpa pembayaran, tanpa langganan.</p>
 <button class="btn-prim gold sec-cta" type="button" onclick="LC.open()">Mulai Cek 5 Menit</button>
@@ -198,7 +206,7 @@ textarea.field-input{resize:vertical;min-height:68px}
 <p class="about-disclaimer">*Ini adalah alat refleksi diri, bukan pengganti layanan psikologis, medis, atau layanan darurat.</p>
 </div></section>
 
-<div class="legal-disclaimer"><strong>Disclaimer:</strong> LifeCode adalah platform edukasi dan alat bantu refleksi diri. Hasilnya bersifat edukatif dan reflektif, bukan diagnosis psikologis, medis, atau psikiatris, dan tidak menggantikan psikolog, psikiater, atau tenaga medis profesional. Jika Anda mengalami tekanan emosional berat atau krisis, segera hubungi profesional berlisensi atau layanan kesehatan jiwa 119 ext. 8.</div>
+<div class="legal-disclaimer"><strong>Disclaimer:</strong> LifeCode adalah platform edukasi dan alat bantu refleksi diri. Hasilnya bersifat edukatif dan reflektif, bukan diagnosis psikologis, medis, atau psikiatris, dan tidak menggantikan psikolog, psikiater, atau tenaga medis profesional. Jika Anda mengalami tekanan emosional berat atau krisis, segera hubungi profesional berlisensi atau layanan kesehatan jiwa 119 ext. 8.<br><br>Halaman ini memakai Facebook Pixel untuk mengukur iklan. Jawaban kuis tidak dikirim ke pihak ketiga.</div>
 </div></div></div>
 
 <script>
@@ -322,6 +330,7 @@ textarea.field-input{resize:vertical;min-height:68px}
 
   function open() {
     const section = $('lc-chat-section'); if (!section) return;
+    document.body.classList.add('chatting');
     section.classList.add('open'); section.setAttribute('aria-hidden', 'false'); updateSticky();
     if (!started) {
       started = true; track('LC_Start');
@@ -334,6 +343,7 @@ textarea.field-input{resize:vertical;min-height:68px}
 
   function close() {
     const section = $('lc-chat-section'); if (!section) return;
+    document.body.classList.remove('chatting');
     section.classList.remove('open'); section.setAttribute('aria-hidden', 'true'); updateSticky();
     const s = $('lc-start'); if (s) s.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
@@ -377,8 +387,8 @@ textarea.field-input{resize:vertical;min-height:68px}
       });
     } else if (i === Q.length + 1) {
       typing(700, function () {
-        bot('Satu hal terakhir, ' + nm() + '. Langkah nyata apa yang ingin Anda ambil minggu ini untuk mulai berubah? (boleh dilewati)');
-        textInput('Tuliskan komitmen Anda...', true, function (v, skipped) {
+        bot('Satu hal terakhir, ' + nm() + '. Dari refleksi tadi, <strong>satu langkah kecil</strong> apa yang ingin Anda lakukan minggu ini? <em>(boleh dilewati)</em>');
+        textInput('Contoh: menulis perasaan 5 menit setiap malam...', true, function (v, skipped) {
           penyerahan = skipped ? '' : v; user(skipped ? 'Lewati' : v); clearInput();
           if (!skipped && hasCrisis(v)) { crisisFlag = true; typing(800, function () { bot('Terima kasih sudah jujur, ' + nm() + '. Anda tidak perlu menanggungnya sendirian. Tolong segera hubungi orang yang Anda percaya, atau layanan kesehatan jiwa: <strong>' + HOTLINE + '</strong>. Jika Anda dalam bahaya sekarang, hubungi layanan darurat setempat.', 'crisis'); setTimeout(summary, 3000); }); return; }
           setTimeout(summary, 400);
@@ -439,7 +449,10 @@ textarea.field-input{resize:vertical;min-height:68px}
     tb.onclick = function () { const v = ta.value.replace(/^\s+|\s+$/g, ''); if (v) go(v, false); };
     ta.onkeydown = function (e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); tb.click(); } };
     if (skippable) { const s = document.createElement('button'); s.type = 'button'; s.className = 'skip-btn'; s.textContent = 'Lewati pertanyaan ini'; s.onclick = function () { go('', true); }; ci.appendChild(s); }
-    setTimeout(function () { ta.focus({ preventScroll: true }); }, 350);
+    // REVISI: di HP (layar sentuh) jangan autofocus agar keyboard tidak menutup bubble pertanyaan
+    if (!window.matchMedia('(pointer:coarse)').matches) setTimeout(function () { ta.focus({ preventScroll: true }); }, 350);
+    ta.addEventListener('focus', function () { setTimeout(function () { scrollDown(); ci.scrollIntoView({ block: 'nearest' }); }, 300); });
+    setTimeout(scrollDown, 400);
   }
 
   function compute() {
@@ -484,12 +497,12 @@ textarea.field-input{resize:vertical;min-height:68px}
       bot('Satu lagi untuk Anda, ' + nm() + ': <strong>' + REPORT_NAME + '</strong>, gratis dan dikirim lewat WhatsApp.');
       setTimeout(function () {
         const h = '<div class="rep-card" id="lc-rep"><h4>🎁 ' + REPORT_NAME + '</h4>' +
-          '<p>Isi data berikut, centang persetujuan, lalu kirim. Laporan akan dikirim ke WhatsApp Anda.</p>' +
-          '<div class="rep-field"><span class="rep-label">Gender Anda *</span><div class="rep-radio"><label><input type="radio" name="lc-g" value="Male"> Male</label><label><input type="radio" name="lc-g" value="Female"> Female</label></div></div>' +
+          '<p>Isi data berikut, centang persetujuan, lalu kirim. Laporan akan dikirim ke WhatsApp Anda <strong>setelah Anda mengklik tombol konfirmasi</strong>.</p>' +
+          '<div class="rep-field"><span class="rep-label">Jenis Kelamin *</span><div class="rep-radio"><label><input type="radio" name="lc-g" value="Male"> Laki-laki</label><label><input type="radio" name="lc-g" value="Female"> Perempuan</label></div></div>' +
           '<div class="rep-field"><label class="rep-label" for="lc-wa">Nomor WhatsApp Aktif *</label><input type="tel" id="lc-wa" class="field-input" inputmode="tel" placeholder="Contoh: 0812XXXXXXXX"></div>' +
           '<label class="rep-agree" for="lc-agree"><input type="checkbox" id="lc-agree"><span>Ya, saya bersedia menerima <strong>' + REPORT_PLAIN + '</strong> lewat WhatsApp, dan setuju nama, gender, tanggal lahir, nomor WhatsApp, serta ringkasan jawaban saya dikirim ke LifeCode untuk menyusun laporan.</span></label>' +
           '<div class="rep-err" id="lc-err" role="alert"></div>' +
-          '<button type="button" class="btn-prim gold rep-send" id="lc-send">Kirim Data &amp; Terima Laporan</button>' +
+          '<button type="button" class="btn-prim gold rep-send" id="lc-send">Simpan Data &amp; Lanjut ke WhatsApp</button>' +
           '<div class="legal-disclaimer">Laporan bersifat edukatif dan reflektif, bukan diagnosis psikologis, medis, atau psikiatris.</div></div>';
         bot(h, 'wide'); setProgress(98);
         const ci = clearInput(); if (ci) ci.innerHTML = '<p class="chat-note">Belum siap? Tidak apa-apa, Anda boleh menutup chat ini. Jawaban Anda tidak dikirim tanpa persetujuan Anda. 🌿</p>';
@@ -512,42 +525,52 @@ textarea.field-input{resize:vertical;min-height:68px}
     const send = $('lc-send'), agree = $('lc-agree'); reportErr('');
     const gEl = document.querySelector('#lc-chat-section input[name="lc-g"]:checked');
     const w = normWA($('lc-wa').value), t = tgl;
-    if (!gEl || !$('lc-wa').value.trim() || !t) { reportErr('Lengkapi gender, nomor WhatsApp, dan tanggal lahir Anda.'); return; }
+    if (!gEl || !$('lc-wa').value.trim() || !t) { reportErr('Lengkapi jenis kelamin, nomor WhatsApp, dan tanggal lahir Anda.'); return; }
     if (!/^\d{9,15}$/.test(w)) { reportErr('Nomor WhatsApp tidak valid. Contoh: 0812XXXXXXXX.'); return; }
     if (!ageOk(t)) { reportErr('Sistem mengidentifikasi usia kurang dari 18 tahun atau tanggal tidak valid.'); return; }
     if (!agree.checked) { reportErr('Centang persetujuan terlebih dahulu.'); return; }
     const used = parseInt(lsGet('lc_used') || '0', 10);
     if (used >= MAX_USE) { reportErr('Sistem mendeteksi limit akses tercapai. Silakan coba lagi esok hari.'); return; }
-    const payload = { nama: nama, tgl_lahir: t, gender: gEl.value, wa: w, hasil_survey: surveyString(), jawaban_kegagalan: '', jawaban_bisikan: '', jawaban_penyerahan: penyerahan, ref: USER_REF };
-    send.disabled = true; send.innerHTML = '<span class="spin"></span> Mengirim data...';
+
+    // Tahap 1: hanya menyimpan data, BELUM mengirim WA
+    const payload = { action: 'save_data', nama: nama, tgl_lahir: t, gender: gEl.value, wa: w, hasil_survey: surveyString(), jawaban_kegagalan: '', jawaban_bisikan: '', jawaban_penyerahan: penyerahan, ref: USER_REF };
+    send.disabled = true; send.innerHTML = '<span class="spin"></span> Menyimpan data...';
     fetch(SCRIPT_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) })
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
       .then(function (txt) {
         let d; try { d = JSON.parse(txt); } catch (e) { throw new Error('respons server tidak valid'); }
         if (d.status === 'rate_limited') throw new Error('terlalu sering, tunggu 1 menit lalu coba lagi');
         if (d.status === 'error') throw new Error(d.message || 'kesalahan server');
-        reportSent = true; lsSet('lc_used', String(used + 1)); track('LC_ReportSent'); done(w, d);
+        reportSent = true; lsSet('lc_used', String(used + 1)); track('LC_ReportSaved'); done(w, d);
       })
       .catch(function (err) {
         reportErr('Data belum terkirim (' + ((err && err.message) || 'koneksi gagal') + '). Periksa internet Anda lalu coba lagi.');
-        send.disabled = false; send.innerHTML = 'Kirim Data &amp; Terima Laporan';
+        send.disabled = false; send.innerHTML = 'Simpan Data &amp; Lanjut ke WhatsApp';
       });
   }
 
   function done(w, data) {
-    const ok = !data || data.wa_sent !== false, card = $('lc-rep'); if (!card) return;
+    const card = $('lc-rep'); if (!card) return;
     setProgress(100);
-    const link = 'https://wa.me/' + WA_BUSINESS + '?text=' + encodeURIComponent('LifeCode free report');
+    const waText = 'Halo LifeCode, saya ' + nama + ' sudah selesai mengisi cek emotional block. Mohon kirimkan Laporan Gratis Karakter & Emotional Block saya.';
+    const waLink = 'https://wa.me/' + WA_BUSINESS + '?text=' + encodeURIComponent(waText);
     const consLink = 'https://wa.me/' + WA_BUSINESS + '?text=' + encodeURIComponent('Halo LifeCode, saya ingin konsultasi 1-on-1');
-    card.innerHTML = '<div class="done"><div class="done-check">✓</div><h4>Data Anda sudah kami terima</h4>' +
-      '<p>Hi <strong>' + esc(nama) + '</strong>, ' + REPORT_PLAIN + (ok ? ' Anda sedang dikirim ke WhatsApp Anda dan biasanya tiba dalam beberapa menit.' : ' Anda sudah kami simpan, tetapi pengiriman otomatis ke WhatsApp belum berhasil. Tekan tombol di bawah agar kami mengirimkannya secara manual.') + '</p>' +
-      '<a class="btn-prim wa-btn" id="lc-wa-link" href="' + link + '" target="_blank" rel="noopener">' + (ok ? 'Sapa LifeCode di WhatsApp (opsional)' : 'Terima Laporan di WhatsApp') + '</a>' +
-      (ok ? '' : '<div class="must-click"><strong>Penting:</strong> pastikan Anda menekan tombol WhatsApp di atas dan mengirim pesannya, agar kami mendapat notifikasi dan dapat mengirimkan laporan Anda.</div>') +
+    card.innerHTML = '<div class="done"><div class="done-check">✓</div><h4>Data Anda berhasil disimpan</h4>' +
+      '<p>Hi <strong>' + esc(nama) + '</strong>, untuk menjaga privasi dan memastikan Anda benar-benar menerima laporan ini, silakan klik tombol di bawah ini. <br><br><strong>Ini akan membuka WhatsApp Anda dan secara otomatis meminta kami mengirimkan laporan Anda.</strong></p>' +
+      '<a class="btn-prim wa-btn" id="lc-wa-link" href="' + waLink + '" target="_blank" rel="noopener">💬 Buka WhatsApp &amp; Terima Laporan Sekarang</a>' +
+      '<div class="must-click"><strong>Penting:</strong> Klik tombol di atas untuk mengonfirmasi. Sistem kami baru akan mengirimkan laporan <em>setelah</em> Anda membuka chat WhatsApp ini, sesuai dengan kebijakan privasi Meta.</div>' +
       '<div class="cons-cta"><p>Ingin membedah pola emosi Anda lebih dalam bersama kami?</p>' +
       '<a href="' + consLink + '" target="_blank" rel="noopener" class="cons-link" id="lc-cons-link">💬 Konsultasi 1-on-1</a></div></div>';
     scrollDown();
-    const ci = clearInput(); if (ci) ci.innerHTML = '<p class="chat-note">Terima kasih, ' + esc(nama) + '. Anda boleh menutup chat setelah menekan tombol WhatsApp. 🌿</p>';
-    const wa = $('lc-wa-link'); if (wa) wa.addEventListener('click', function () { track('LC_WhatsAppClick'); });
+    const ci = clearInput(); if (ci) ci.innerHTML = '<p class="chat-note">Terima kasih, ' + esc(nama) + '. Silakan klik tombol WhatsApp di atas. 🌿</p>';
+
+    // Tahap 2: saat tombol WA diklik, server baru mengirim laporan
+    const wa = $('lc-wa-link');
+    if (wa) wa.addEventListener('click', function () {
+      track('LC_WhatsAppClick');
+      fetch(SCRIPT_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action: 'trigger_send_report', wa: w, nama: nama }) })
+        .catch(function (err) { console.log('Trigger sent (or failed silently)', err); });
+    });
     const cl = $('lc-cons-link'); if (cl) cl.addEventListener('click', function () { track('LC_ConsultClick'); });
   }
 
